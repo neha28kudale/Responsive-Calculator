@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive calculat</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-md calculator-container">
+  <div class="rounded-3xl overflow-hidden">
+
+    <!-- Display -->
+    <div class="p-6 bg-gradient-to-b from-gray-700 to-gray-800">
+      <div id="operation-display" class="text-right text-gray-300 text-sm h-6"></div>
+      <div id="display" class="text-right text-4xl font-semibold text-white h-12">0</div>
+    </div>
+
+    <!-- Mode Toggle -->
+    <div class="flex justify-center my-2">
+      <button id="mode-toggle"
+        class="bg-gray-700 hover:bg-gray-600 text-gray-200 px-4 py-2 rounded-lg text-sm">
+        Standard Mode
+      </button>
+    </div>
+
+    <!-- Keypad -->
+    <div class="keypad grid grid-cols-4 gap-2 p-4">
+
+      <!-- Scientific -->
+      <button class="sci-btn hidden" data-action="sqrt">√</button>
+      <button class="sci-btn hidden" data-action="power">xʸ</button>
+      <button class="sci-btn hidden" data-action="log">log</button>
+      <button class="sci-btn hidden" data-action="ln">ln</button>
+      <button class="sci-btn hidden" data-action="sin">sin</button>
+      <button class="sci-btn hidden" data-action="cos">cos</button>
+      <button class="sci-btn hidden" data-action="tan">tan</button>
+      <button class="sci-btn hidden" data-action="pi">π</button>
+      <button class="sci-btn hidden" data-action="e">e</button>
+      <button class="sci-btn hidden" data-action="factorial">x!</button>
+
+      <!-- Controls -->
+      <button class="calc-btn bg-red-500" data-action="clear">AC</button>
+      <button class="calc-btn bg-gray-600" data-action="sign">±</button>
+      <button class="calc-btn bg-gray-600" data-action="percent">%</button>
+      <button class="calc-btn bg-blue-500" data-action="operator">÷</button>
+
+      <!-- Numbers -->
+      <button class="calc-btn" data-number="7">7</button>
+      <button class="calc-btn" data-number="8">8</button>
+      <button class="calc-btn" data-number="9">9</button>
+      <button class="calc-btn bg-blue-500" data-action="operator">×</button>
+
+      <button class="calc-btn" data-number="4">4</button>
+      <button class="calc-btn" data-number="5">5</button>
+      <button class="calc-btn" data-number="6">6</button>
+      <button class="calc-btn bg-blue-500" data-action="operator">−</button>
+
+      <button class="calc-btn" data-number="1">1</button>
+      <button class="calc-btn" data-number="2">2</button>
+      <button class="calc-btn" data-number="3">3</button>
+      <button class="calc-btn bg-blue-500" data-action="operator">+</button>
+
+      <button class="calc-btn col-span-2" data-number="0">0</button>
+      <button class="calc-btn" data-number=".">.</button>
+      <button class="calc-btn bg-green-500" data-action="equals">=</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
